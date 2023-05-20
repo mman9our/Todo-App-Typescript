@@ -1,7 +1,7 @@
 import React from 'react';
 import './Navbar.css'
-import LOGO from '../../../assets/images/logo.png';
-import MAN from '../../../assets/images/beard-man.png';
+import LOGO from '../../assets/images/logo.png';
+import MAN from '../../assets/images/beard-man.png';
 
 const Navbar: React.FC = () => {
   return (

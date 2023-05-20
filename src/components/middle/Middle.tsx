@@ -1,5 +1,5 @@
 import React from "react";
-import Taskstable from "../../todos/Taskstable";
+import Taskstable from "../todos/Taskstable";
 import "./middle.css";
 
 const Middle: React.FC = () => {

@@ -4,12 +4,7 @@ import TaskCard from './TaskCard';
 import Swal from 'sweetalert2';
 import SearchTodos from './SearchTodos';
 import ReactSwitch from 'react-switch';
-
-interface Task {
-  id: string;
-  title: string;
-  isDone: boolean;
-}
+import { Task } from '../../types/todos'; // Import the Task type from todos.ts
 
 function Taskstable() {
   const [tasks, setTasks] = useState<Task[]>([]); // Provide an initial value of an empty array

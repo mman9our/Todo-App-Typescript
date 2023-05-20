@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import Navbar from './components/webUi/navbar/Navbar';
-import Sidebar from './components/webUi/sidebar/Sidebar';
-import Middle from './components/webUi/middle/Middle';
-import RecentList from './components/webUi/right/RecentList';
+import Navbar from './components/navbar/Navbar';
+import Sidebar from './components/sidebar/Sidebar';
+import Middle from './components/middle/Middle';
+import RecentList from './components/right/RecentList';
 import './App.css'
 
 function App() {
