@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './taskstable.css';
-import TaskCard from './TaskCard';
+import TaskCard from './Taskcard';
 import Swal from 'sweetalert2';
 import SearchTodos from './SearchTodos';
 import ReactSwitch from 'react-switch';

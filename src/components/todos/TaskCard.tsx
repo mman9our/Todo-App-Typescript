@@ -1,5 +1,6 @@
 import './taskstable.css';
-import { Task } from '../../types/todos'; // Import the Task type from todos.ts
+import { Task } from '../../types/todos';
+import classNames from 'classnames';
 
 interface TaskCardProps {
   task: Task;
@@ -12,8 +13,10 @@ function TaskCard({ task, onToggleDone }: TaskCardProps) {
     onToggleDone(updatedTask);
   };
 
+  const taskClassName = classNames('task', { 'done': task.isDone });
+
   return (
-    <div className={`task${task.isDone ? ' done' : ''}`}>
+    <div className={taskClassName}>
       <div className="task-info">
         <h2>{task.title}</h2>
       </div>
