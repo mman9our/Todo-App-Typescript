@@ -4,16 +4,17 @@ import TaskCard from './TaskCard';
 import Swal from 'sweetalert2';
 import SearchTodos from './SearchTodos';
 import ReactSwitch from 'react-switch';
-import { Task } from '../../types/todos'; // Import the Task type from todos.ts
+import { Task } from '../../types/todos';
+import {  countCompletedTasks, countCurrentTasks, countTotalTasks } from '../../utils/taskFilter'; 
 
 function Taskstable() {
   const [tasks, setTasks] = useState<Task[]>([]); // Provide an initial value of an empty array
   const [filteredTasks, setFilteredTasks] = useState<Task[]>([]);
   const [showAllTasks, setShowAllTasks] = useState(true);
 
-  const completedTasks = tasks.filter(task => task.isDone).length;
-  const currentTasks = tasks.filter(task => !task.isDone).length;
-  const totalTasks = tasks.length;
+  const completedTasks = countCompletedTasks(tasks);
+  const currentTasks = countCurrentTasks(tasks);
+  const totalTasks = countTotalTasks(tasks);
 
   useEffect(() => {
     const savedTasks = JSON.parse(localStorage.getItem('tasks') ?? 'null');
